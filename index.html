@@ -145,7 +145,6 @@
 
             function generateTimeline(elements) {
                 const div = document.getElementsByClassName('root')[0];
-                console.log(div);
                 const colors = ['green', 'red', 'blue', '#c88408', '#c3a109'];
                 const timeline = document.createElement('div');
                 timeline.classList.add('timeline');
@@ -157,7 +156,8 @@
                     document.createElement('div'),
                     document.createElement('div'),
                 ];
-                div.append(...divs);
+                timeline.append(...divs);
+                div.append(timeline);
                 function getDiv() {
                     let i = 0;
                     for (let j = 0; j < divs.length; j++) {
@@ -181,8 +181,6 @@
                     p.addEventListener('click', () => highlight(el.id));
                     getDiv().append(p);
                 }
-                timeline.append(...divs);
-                return timeline;
             }
 
             function formatTimelength(length) {
@@ -195,7 +193,6 @@
             }
 
             function highlight(id) {
-                console.log(id);
                 window.location.hash = '#' + id;
                 const element = document.getElementById(id);
                 for (const el of Object.values(
