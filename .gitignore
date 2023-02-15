@@ -1,0 +1,6 @@
+node_modules/
+profiler-*.json
+pnpm-lock.yaml
+pnpm-lock.yml
+*.js
+!timer.js

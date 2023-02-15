@@ -1,0 +1,6 @@
+{
+	"dependencies": {
+		"@types/node": "^18.13.0",
+		"chalk": "4.1.2"
+	}
+}
